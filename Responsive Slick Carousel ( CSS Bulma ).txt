@@ -1,0 +1,85 @@
+- Responsiver Slick Carousel - 
+Created Using CSS Bulma Framework
+
+    <section class="hero" style="background-color: #ffffff;">
+        <div class="hero-body">
+            <div class="container">
+
+                <strong style="font-size: 40px; color: #c5c5c5;">AERIAL VIDEOGRAPHY</strong> <br><br>
+
+                <div class="columns is-desktop">
+                    <div class="carousel-container">
+                        <div class="carousel-slide">
+                            <img src="/Images/Gweain.jpeg">
+                            <img src="/Images/Gweain.jpeg">
+                            <img src="/Images/Gweain.jpeg">
+                            <img src="/Images/Gweain.jpeg">
+                            <img src="/Images/Gweain.jpeg">
+                            <img src="/Images/Gweain.jpeg">
+                            <img src="/Images/Gweain.jpeg">
+                        </div>
+
+                    </div>
+
+        <!-- Include jQuery and Slick JS -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+        <!-- Initialize the Slick JS carousel -->
+        <script>
+            $(document).ready(function () {
+                $('.carousel-slide').slick({
+                    infinite: true, // Loop the carousel
+                    speed: 250, // Set the speed of the carousel animation
+                    slidesToShow: 5, // Set the number of slides to show on desktop
+                    adaptiveHeight: true, // Set the height of the carousel to adapt to the current slide
+                    prevArrow: $('.carousel-prev'), // Add the previous button to the carousel
+                    nextArrow: $('.carousel-next'), // Add the next button to the carousel
+                    responsive: [
+                        {
+                            breakpoint: 768, // breakpoint for mobile devices
+                            settings: {
+                                slidesToShow: 2 // Set the number of slides to show on mobile
+                            }
+                        }
+                    ]
+                });
+            });
+        </script>
+
+        <!-- Apply CSS styles to the carousel -->
+        <style>
+            .carousel-container {
+                width: 100%;
+                /* Set the width of the carousel to fill its container */
+                margin: 0 auto;
+                /* Center the carousel horizontally */
+            }
+
+            .carousel-slide {
+                width: 100%;
+                /* Set the width of the slides to fill the carousel */
+            }
+
+            .carousel-slide img {
+                width: 100%;
+                /* Set the width of the images to fill their container */
+                margin-right: 10px;
+                /* Add a margin of 10 pixels to the right of each image */
+            }
+        </style>
+
+
+        </div>
+
+        <!--
+            <div class="container has-text-centered">
+                <div class="carousel-nav">
+                    <button class="carousel-prev">Previous</button>
+                    <button class="carousel-next">Next</button>
+                  </div>
+            </div>
+            -->
+
+        </div>
+    </section>
